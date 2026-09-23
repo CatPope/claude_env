@@ -1,1 +1,4 @@
 .omc/
+# 스파이크 실행 산출물(로그·백업). 결과는 docs/spikes/results.md 에 옮겨 적는다.
+spikes/_log/
+spikes/_backup/
