@@ -32,6 +32,7 @@ Windows에서 Claude Code 작업 환경을 관리하는 도구입니다. 요구�
 | 2차(계정 전환) | 스파이크 `ralph` → `ralplan --deliberate` → `ralph` → `security-review` |
 
 - 다음 단계로 넘어가기 전마다 어떤 모드가 맞는지 다시 검토하고, 필요하면 구성을 바꿉니다. 바꿀 때는 이유를 짧게 알립니다.
+- 에이전트를 띄울 때는 `model=fable`을 씁니다. 가벼운 모델로 충분한 단순 조회(파일 찾기, 짧은 확인)만 `haiku`를 씁니다. `opus`/`sonnet`은 쓰지 않습니다.
 - 사용자 의견·결정이 필요한 경우(범위, UX 트레이드오프, 약관 같은 판단)는 AskUserQuestion 선택지로 묻습니다. 산문 질문으로 끝내지 않습니다.
 - 이 레포는 데모 버전이고 개발자는 사용자와 Claude뿐입니다. `git commit`/`git push`는 확인 없이 해도 됩니다.
 
