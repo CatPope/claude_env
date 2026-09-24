@@ -99,7 +99,8 @@ else
     TITLE_EMITTED="$TITLE"
     if [ "$MODE" = "osc" ]; then
       # S4(a) 불합격 시 대체 경로 시험: terminalSequence 로 OSC 0 을 직접 내보낸다.
-      printf '{"hookSpecificOutput":{"hookEventName":"%s","terminalSequence":"\\u001b]0;%s\\u0007"}}\n' "$EVENT" "$(jesc "$TITLE")"
+      # 훅 문서: terminalSequence 는 최상위 키(sessionTitle 과 달리 hookSpecificOutput 안이 아님).
+      printf '{"terminalSequence":"\\u001b]0;%s\\u0007"}\n' "$(jesc "$TITLE")"
     else
       printf '{"hookSpecificOutput":{"hookEventName":"%s","sessionTitle":"%s"}}\n' "$EVENT" "$(jesc "$TITLE")"
     fi

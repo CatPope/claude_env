@@ -2,9 +2,17 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## 현재 상태
+## 현재 상태 (2026-09-24 기준)
 
-기획 단계입니다. 아직 코드·빌드·테스트 명령이 없습니다. 기술 스택과 구조가 정해지면 이 파일에 명령과 아키텍처를 추가하세요.
+계획 확정, 확인 실험(Step 0 스파이크) 착수 직전에서 **일시 중단** 상태입니다. 아직 제품 코드는 없습니다.
+
+- 요구사항 명세: `docs/planning/spec-deep-interview.md`
+- 합의 계획(rev 5, 확정): `docs/planning/plan-ralplan.md` — Rust `cce.exe` + Tauri 2 트레이 앱. 실행 방식 A(일반 claude) 기본, C(백그라운드 세션) 프로젝트별 선택.
+- 실험 스크립트와 안내서: `spikes/`, `docs/spikes/runbook.md`(A 경로: S1→S5→S4→S2), `docs/spikes/runbook-c.md`(C 경로: S3, S4b). 결과는 `docs/spikes/results.md`, `results-c.md`에 적습니다.
+- 설정 백업 완료: `spikes/_backup/20260923-120737-start` (git 제외). 실험 중 바꾼 설정은 `spikes/common/restore.ps1 -Timestamp 20260923-120737-start`로 되돌립니다.
+- 설치됨: Rust(cargo 1.98, `%USERPROFILE%\.cargo\bin`), PowerShell 7.6(스토어판, `%LOCALAPPDATA%\Microsoft\WindowsApps\pwsh.exe`). `wt.exe`, `winget.exe`도 그 폴더에 있어 일부 셸 PATH에는 없습니다.
+
+**이어서 할 일:** S1부터 안내서대로 진행합니다. 단, S1은 Windows Terminal 창을 전부 닫아야 하므로 **Claude 세션을 WT 밖(일반 콘솔이나 VS Code 터미널)에서 이어가야** 합니다. 실험 뒤 계획에 반영할 차이점은 `docs/spikes/runbook.md` 부록 B와 `runbook-c.md` §8에 있습니다 (예: `claude agents --json` 필드, 훅 시간 하한 ≈250ms, `--settings`가 resume 시 복원되지 않음).
 
 ## 목표 (출처: `docs/기획/초안.txt`)
 
