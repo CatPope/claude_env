@@ -6,7 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 계획 확정, 확인 실험(Step 0 스파이크) 착수 직전에서 **일시 중단** 상태입니다. 아직 제품 코드는 없습니다.
 
-- 요구사항 명세: `docs/planning/spec-deep-interview.md`
+- 요구사항 정리(FR/NFR, 기준 문서): `docs/requirements.md`
+- 요구사항 인터뷰 원본: `docs/planning/spec-deep-interview.md`
 - 합의 계획(rev 5, 확정): `docs/planning/plan-ralplan.md` — Rust `cce.exe` + Tauri 2 트레이 앱. 실행 방식 A(일반 claude) 기본, C(백그라운드 세션) 프로젝트별 선택.
 - 실험 스크립트와 안내서: `spikes/`, `docs/spikes/runbook.md`(A 경로: S1→S5→S4→S2), `docs/spikes/runbook-c.md`(C 경로: S3, S4b). 결과는 `docs/spikes/results.md`, `results-c.md`에 적습니다.
 - 설정 백업 완료: `spikes/_backup/20260923-120737-start` (git 제외). 실험 중 바꾼 설정은 `spikes/common/restore.ps1 -Timestamp 20260923-120737-start`로 되돌립니다.
